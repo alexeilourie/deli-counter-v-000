@@ -1,11 +1,21 @@
-def line(names)
+def line(katz_deli)
   line = "The line is currently:"
-  if names.size == 0
-    return "The line is currently empty."
+  if katz_deli.size == 0
+    puts "The line is currently empty."
   else
-    names.each.with_index do |name, idx|
+    katz_deli.each.with_index do |name, idx|
       line << " #{idx+1}. #{name}"
     end
-    return line
+    puts line
   end
+end
+
+def take_a_number(katz_deli, name)
+  katz_deli.push(name)
+  idx = katz_deli(name)
+  puts "Welcome, #{name}. You are number #{idx + 1} in line."
+end
+
+def now_serving(katz_deli)
+
 end
